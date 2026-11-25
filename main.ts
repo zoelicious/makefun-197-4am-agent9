@@ -6,4 +6,5 @@ const here = dirname(fileURLToPath(import.meta.url));
 const outDir = process.env.MAKEFUN_OUTPUT_DIR || join(here, "..", "output");
 mkdirSync(outDir, { recursive: true });
 const text = "fix: corrected the single typo that took down production; the typo has been promoted to senior";
+// Single write path: the entry text above is produced once, verbatim.
 writeFileSync(join(outDir, "entry.txt"), text, "utf8");
